@@ -1,0 +1,12 @@
+<div class="search-result-error" *ngIf="errorMessage">{{errorMessage}}</div>
+<div class="search-result-loading" *ngIf="isLoading">
+    Loading...
+</div>
+<div class="search-result-container" *ngIf="!errorMessage">
+    <div class="search-result--item" *ngFor="let movie of movies">
+        <img src={{movie.Poster}}/>
+        <div class="title"><b>Title:</b> {{movie.Title}}</div>
+        <div class="year"><b>Year:</b> {{movie.Year}}</div>
+        <div class="type"><b>Type:</b> {{movie.Type}}</div>
+    </div>
+</div>
